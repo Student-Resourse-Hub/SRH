@@ -23,9 +23,8 @@ header h1 {
     text-align: center;
 }
 
+/* Navigation Styles */
 nav {
-    display: flex;
-    justify-content: center;
     background-color: #003399;
 }
 
@@ -34,6 +33,8 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: center;
+    position: relative;
 }
 
 nav li {
@@ -51,20 +52,35 @@ nav a:hover {
     background-color: #002280;
 }
 
+/* Submenu Styles */
 nav ul ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #003399;
+    background-color: #002280; /* Set a distinct background color for submenu */
+    z-index: 1000; /* Bring the submenu to the front */
+    padding: 0;
+    margin: 0;
+    width: 200px; /* Ensure submenu items have enough space */
+}
+
+nav ul ul li {
+    width: 100%; /* Full width for each submenu item */
 }
 
 nav ul li:hover > ul {
     display: block;
 }
 
-nav ul ul li {
-    width: 200px;
+nav ul ul a {
+    color: white; /* Ensure submenu text color remains consistent */
+    padding: 0.75rem; /* Reduce padding for submenu items */
+    background-color: #109fca;
+}
+
+nav ul ul a:hover {
+    background-color: #347ed3; /* Darker hover effect for submenu */
 }
 
 /* Main Content Styles */
@@ -108,4 +124,32 @@ footer {
     text-align: center;
     padding: 1rem 0;
     color: #666;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (tablets and mobile phones) */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Mobile Navbar Styles */
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 0;
+    }
+
+    nav a {
+        padding: 0.75rem;
+        text-align: left;
+        width: 100%;
+    }
+
+    nav ul ul {
+        position: relative; /* Adjust for better mobile handling */
+        width: 100%; /* Full width submenu for mobile */
+    }
 }
