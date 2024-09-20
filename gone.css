@@ -1,13 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Resource Hub</title>
-</head>
+
+body {
+  /* Set initial background image */
+  background-image: url('Logo.jpg');
+  background-size: contain;
+  background-position: center;
+  /* Use keyframes to animate the background image */
+  animation: changeBackground 10s infinite;
+}
+
+@keyframes changeBackground {
+  0% {
+    background-image: url('students12.jpg');
+  }
+  33% {
+    background-image: url('SRH.jpg');
+  }
+  66% {
+    background-image: url('hall.jpg');
+  }
+  100% {
+    background-image: url('dew.jpg');
+  }
+}
+
+
 
 .contact-section {
-  background-color: #f9f9f9;
+  background-color: none;
   padding: 50px 0;
 }
 
@@ -15,6 +34,7 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  background-color: powderblue;
 }
 
 h2 {
