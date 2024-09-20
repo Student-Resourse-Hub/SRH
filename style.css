@@ -1,16 +1,41 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-}
+    /* Set initial background image */
+    background-image: url('Logo.jpg');
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    font-size: 18px;
+    /* Use keyframes to animate the background image */
+    animation: changeBackground 10s infinite;
+  }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
+  @keyframes changeBackground {
+    0% {
+      background-image: url('students12.jpg');
+    }
+    33% {
+      background-image: url('SRH.jpg');
+    }
+    66% {
+      background-image: url('hall.jpg');
+    }
+    100% {
+      background-image: url('dew.jpg');
+    }
+  }
 
+.container{
+    width: 80%;           /* Width of the box */
+    margin: 15px auto;     /* Center the box horizontally */
+    padding: 15px;         /* Padding inside the box */
+    background-color: lightseagreen; /* Box background color */
+    color: white;          /* Text color inside the box */
+    border-radius: 20px;   /* Rounded corners */
+    box-shadow: 4px 4px 4px 4px peru; /* Shadow for depth */
+    }
+
+   
 /* Header Styles */
 header {
     background-color: #0044cc;
@@ -89,7 +114,7 @@ main {
 }
 
 section {
-    padding: 2rem 0;
+    padding: 0.5rem 0;
 }
 
 h2 {
@@ -151,5 +176,9 @@ footer {
     nav ul ul {
         position: relative; /* Adjust for better mobile handling */
         width: 100%; /* Full width submenu for mobile */
+    }
+
+    nav ul ul a {
+        padding: 0.75rem 1rem; /* Ensure padding is consistent in mobile view */
     }
 }
